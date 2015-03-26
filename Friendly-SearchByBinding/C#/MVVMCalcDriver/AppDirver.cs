@@ -21,7 +21,6 @@ namespace MVVMCalcDriver
             _app = new WindowsAppFriend(Process.Start("MVVMCalc.exe"));
             MainView = new MainViewDirver(_app.Type<Application>().Current.MainWindow);
         }
-
         public void Dispose()
         {
             Process.GetProcessById(_app.ProcessId).CloseMainWindow();
